@@ -11,17 +11,20 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.13.7",
-    "@mui/material": "^5.13.7",
-    "autoprefixer": "10.4.14",
+    "@mui/icons-material": "^5.14.0",
+    "@mui/material": "^5.14.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "mui": "^0.0.1",
     "next": "13.4.9",
-    "postcss": "8.4.25",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.63.6",
-    "tailwindcss": "3.3.2"
+    "react-material-ui-carousel": "^3.4.2",
+    "sass": "^1.63.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.25",
+    "tailwindcss": "^3.3.3"
   }
 }
