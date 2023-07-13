@@ -5,6 +5,8 @@ export default function SalesInfoPage() {
     <div>
       <h1>Sales Information</h1>
       <p>Display your sales information here</p>
+
+      
     </div>
   );
 }
