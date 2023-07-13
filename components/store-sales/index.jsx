@@ -56,7 +56,7 @@ function randNumber(min, max) {
 }
 
 // SalesInfo component
-const SalesInfo = () => {
+export const SalesInfo = () => {
   return (
     <div>
       <Typography variant="h4" gutterBottom>
@@ -92,8 +92,8 @@ const SalesInfo = () => {
 };
 
 // Function to calculate total sales for all stores
-const allSales = (stores) => {
+export const allSales = (stores) => {
   return stores.reduce((total, store) => total + store.totalSales, 0);
 };
 
-export { SalesInfo, allStores };
+
