@@ -1,14 +1,15 @@
 import Footer from "@/components/layout/footer"
-import Header from "@/components/layout/header"
 import Body from "@/components/layout/body"
+import Layout from "@/components/layout"
 
 export default function Page() {
+
   return (
     <>
-      <Header />
-      <Body />
-      <h1>Hello, Next.js!</h1>
-      <Footer />
+      <Layout>
+
+        <Body />
+      </Layout>
     </>
   )
 }
