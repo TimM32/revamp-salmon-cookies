@@ -2,8 +2,29 @@
 
 import { useState } from 'react';
 import { AppBar, Box, Button, IconButton, Modal, Toolbar, Typography } from '@mui/material';
+import { createTheme } from '@mui/material';
+import { light } from '@mui/material/styles/createPalette';
+// import{ red }
 // import MenuIcon from '@mui/icons-material/Menu';
 // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       light: '#757ce8',
+//       main: '#3f50b5',
+//       dark: '#002884',
+//       contrastText: '#fff',
+//     },
+//     secondary: {
+//       light: '#ff7961',
+//       main: '#f44336',
+//       dark: '#ba000d',
+//       contrastText: '#000',
+//     },
+//   },
+// });
+// const primary = red[500]
 
 
 const Header = () => {
@@ -19,7 +40,7 @@ const Header = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" color='primary'>
         <Toolbar>
           <IconButton
             size="large"
@@ -30,7 +51,7 @@ const Header = () => {
           >
             {/* <MenuIcon /> */}
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
             Salmon Cookies
           </Typography>
           <IconButton
