@@ -6,8 +6,8 @@ export default function Page() {
   return (
     <>
       <Header />
+      {/* <h1>Hello, Next.js!</h1> */}
       <Body />
-      <h1>Hello, Next.js!</h1>
       <Footer />
     </>
   )
