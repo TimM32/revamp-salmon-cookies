@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import { AppBar, Box, Button, IconButton, Modal, Toolbar, Typography } from '@mui/material';
-import { createTheme } from '@mui/material';
-import { light } from '@mui/material/styles/createPalette';
+// import { createTheme } from '@mui/material';
+// import { light } from '@mui/material/styles/createPalette';
+import Link from 'next/link';
 // import{ red }
-// import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
 // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 // const theme = createTheme({
@@ -49,7 +50,10 @@ const Header = () => {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            {/* <MenuIcon /> */}
+            <Link href="/">
+              <MenuIcon />
+            </Link>
+
           </IconButton>
           <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
             Salmon Cookies
@@ -64,10 +68,23 @@ const Header = () => {
           >
           </IconButton>
           {/* <ShoppingCartIcon /> */}
-          <Button color="inherit" onClick={handleOpen}>About Us </Button>
-          <Button color="inherit" onClick={handleOpen}>Sales Info </Button>
-          <Button color="inherit" onClick={handleOpen}>Contact us </Button>
-          <Button color="inherit" onClick={handleOpen}>Cart </Button>
+          <Link href="/about">
+            <Button color="inherit" onClick={handleOpen}>About Us </Button>
+          </Link>
+
+          <Link href="/sales-info">
+            <Button color="inherit" onClick={handleOpen}>Sales Info </Button>
+
+          </Link>
+
+          <Link href="/contact">
+            <Button color="inherit" onClick={handleOpen}>Contact us </Button>
+          </Link>
+
+          <Link href="/place-order">
+            <Button color="inherit" onClick={handleOpen}>Cart </Button>
+          </Link>
+
         </Toolbar>
       </AppBar>
 
