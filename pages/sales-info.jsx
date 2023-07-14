@@ -9,20 +9,18 @@ export default function SalesInfoPage() {
   const handleStoreAdded = (newStore) => {
     const updatedStores = [...stores, newStore];
     setStores(updatedStores);
-    console.log('Updated Store: ',updatedStores);
+    console.log('Updated Store: ', updatedStores);
   };
 
   const totalSales = allSales(stores);
 
   return (
-    <React.StrictMode>
-      <Layout>
-        <>
-          <SalesInfo stores={stores} />
-          <StoreForm onStoreAdded={handleStoreAdded} />
-          <div>Total Sales: {totalSales}</div>
-        </>
-      </Layout>
-    </React.StrictMode>
+    <Layout>
+      <>
+        <SalesInfo stores={stores} />
+        <StoreForm onStoreAdded={handleStoreAdded} />
+        <div>Total Sales: {totalSales}</div>
+      </>
+    </Layout>
   );
 }
