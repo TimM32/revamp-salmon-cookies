@@ -1,6 +1,6 @@
 'use client'
 
-import Carousel from '../../carousel'
+import Carousel from '@/components/carousel'
 import HeroSection from './hero'
 import Grid from './Grid'
 
@@ -8,8 +8,8 @@ export default function body(){
   return (
     <div>
       <HeroSection />
-      <Grid />
       <Carousel />
+      <Grid />
       
     </div>
   )

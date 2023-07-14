@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Paper, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Typography } from '@mui/material';
 
-class Store {
+export class Store {
   constructor(location, minCustomer, maxCustomer, avgCookieSale, hourlySales, totalSales) {
     this.location = location;
     this.minCustomer = minCustomer;
@@ -13,13 +13,16 @@ class Store {
   }
 
   storeCalculator() {
-    for (let i = 0; i < operatingHours.length; i++) {
-      const hourlyCustomers = randNumber(this.minCustomer, this.maxCustomer);
-      const avgCookiePerCustomer = Math.floor(hourlyCustomers * this.avgCookieSale);
-      this.hourlySales.push(avgCookiePerCustomer);
-      this.totalSales += this.hourlySales[i];
+    if (this.hourlySales.length === 0) {
+      for (let i = 0; i < operatingHours.length; i++) {
+        const hourlyCustomers = randNumber(this.minCustomer, this.maxCustomer);
+        const avgCookiePerCustomer = Math.floor(hourlyCustomers * this.avgCookieSale);
+        this.hourlySales.push(avgCookiePerCustomer);
+        this.totalSales += this.hourlySales[i];
+      }
     }
   }
+  
 
   render() {
     return (
@@ -67,7 +70,15 @@ export const SalesInfo = ({ stores }) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {stores.map((store) => store.render())}
+            {stores.map((store) => (
+              <TableRow key={store.location}>
+                <TableCell>{store.location}</TableCell>
+                {store.hourlySales.map((hourlySale, index) => (
+                  <TableCell key={index}>{hourlySale}</TableCell>
+                ))}
+                <TableCell>{store.totalSales}</TableCell>
+              </TableRow>
+            ))}
             <TableRow>
               <TableCell>Total Cookies Sold:</TableCell>
               {operatingHours.map((_, index) => (

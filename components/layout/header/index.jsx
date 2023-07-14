@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { AppBar, Box, Button, IconButton, Modal, Toolbar, Typography } from '@mui/material';
 // import { createTheme } from '@mui/material';
 // import { light } from '@mui/material/styles/createPalette';
+import './header.scss';
 import Link from 'next/link';
 // import{ red }
 import MenuIcon from '@mui/icons-material/Menu';
@@ -50,7 +51,7 @@ const Header = () => {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <Link href="/">
+            <Link href="/" className='menuIcon'>
               <MenuIcon />
             </Link>
 
@@ -68,21 +69,25 @@ const Header = () => {
           >
           </IconButton>
           {/* <ShoppingCartIcon /> */}
+          <Link href="/">
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>Home</Button>
+          </Link>
+
           <Link href="/about">
-            <Button color="inherit" onClick={handleOpen}>About Us </Button>
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>About Us </Button>
           </Link>
 
           <Link href="/sales-info">
-            <Button color="inherit" onClick={handleOpen}>Sales Info </Button>
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>Sales Info </Button>
 
           </Link>
 
           <Link href="/contact">
-            <Button color="inherit" onClick={handleOpen}>Contact us </Button>
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>Contact us </Button>
           </Link>
 
           <Link href="/place-order">
-            <Button color="inherit" onClick={handleOpen}>Cart </Button>
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>Cart </Button>
           </Link>
 
         </Toolbar>
