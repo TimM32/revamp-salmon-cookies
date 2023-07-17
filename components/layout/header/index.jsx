@@ -70,24 +70,24 @@ const Header = () => {
           </IconButton>
           {/* <ShoppingCartIcon /> */}
           <Link href="/">
-            <Button className="nav-button" onClick={handleOpen}>Home</Button>
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>Home</Button>
           </Link>
 
           <Link href="/about">
-            <Button className="nav-button" onClick={handleOpen}>About Us </Button>
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>About Us </Button>
           </Link>
 
           <Link href="/sales-info">
-            <Button className="nav-button" onClick={handleOpen}>Sales Info </Button>
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>Sales Info </Button>
 
           </Link>
 
           <Link href="/contact">
-            <Button className="nav-button" onClick={handleOpen}>Contact us </Button>
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>Contact us </Button>
           </Link>
 
           <Link href="/place-order">
-            <Button className="nav-button" onClick={handleOpen}>Cart </Button>
+            <Button className="nav-button" color="inherit" onClick={handleOpen}>Cart </Button>
           </Link>
 
         </Toolbar>
